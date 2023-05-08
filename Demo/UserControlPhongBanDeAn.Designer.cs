@@ -1,4 +1,4 @@
-﻿namespace Demo
+namespace Demo
 {
     partial class UserControlPhongBanDeAn
     {
@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvDeAn = new System.Windows.Forms.DataGridView();
             this.dgvPhongBan = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvDeAn = new System.Windows.Forms.DataGridView();
             this.BTN_NS_Update = new System.Windows.Forms.Button();
             this.BTN_NS_Create = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,9 +55,9 @@
             this.txtNewTruongPhong = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).BeginInit();
             this.pn_UpdatePB.SuspendLayout();
             this.pn_AddNewPB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,9 +68,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvPhongBan);
-            this.panel1.Location = new System.Drawing.Point(60, 71);
+            this.panel1.Location = new System.Drawing.Point(38, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 252);
+            this.panel1.Size = new System.Drawing.Size(457, 276);
             this.panel1.TabIndex = 7;
             // 
             // label1
@@ -84,29 +84,46 @@
             this.label1.TabIndex = 72;
             this.label1.Text = "PHONG BAN";
             // 
+            // dgvDeAn
+            // 
+            this.dgvDeAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeAn.Location = new System.Drawing.Point(3, 42);
+            this.dgvDeAn.MultiSelect = false;
+            this.dgvDeAn.Name = "dgvDeAn";
+            this.dgvDeAn.ReadOnly = true;
+            this.dgvDeAn.RowHeadersVisible = false;
+            this.dgvDeAn.RowHeadersWidth = 51;
+            this.dgvDeAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeAn.Size = new System.Drawing.Size(453, 259);
+            this.dgvDeAn.TabIndex = 0;
+            // 
             // dgvPhongBan
             // 
+            this.dgvPhongBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhongBan.Location = new System.Drawing.Point(7, 41);
+            this.dgvPhongBan.Location = new System.Drawing.Point(3, 41);
             this.dgvPhongBan.MultiSelect = false;
             this.dgvPhongBan.Name = "dgvPhongBan";
             this.dgvPhongBan.ReadOnly = true;
+            this.dgvPhongBan.RowHeadersVisible = false;
             this.dgvPhongBan.RowHeadersWidth = 51;
             this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhongBan.Size = new System.Drawing.Size(356, 202);
+            this.dgvPhongBan.Size = new System.Drawing.Size(449, 230);
             this.dgvPhongBan.TabIndex = 0;
+            this.dgvPhongBan.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.dgvDeAn);
             this.panel3.Controls.Add(this.btnRemove);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.dgvDeAn);
-            this.panel3.Location = new System.Drawing.Point(60, 370);
+            this.panel3.Location = new System.Drawing.Point(38, 380);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(461, 355);
+            this.panel3.Size = new System.Drawing.Size(461, 306);
             this.panel3.TabIndex = 8;
             // 
             // btnAdd
@@ -149,21 +166,6 @@
             this.label4.Size = new System.Drawing.Size(102, 37);
             this.label4.TabIndex = 73;
             this.label4.Text = "DE AN";
-            // 
-            // dgvDeAn
-            // 
-            this.dgvDeAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDeAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeAn.Location = new System.Drawing.Point(3, 41);
-            this.dgvDeAn.MultiSelect = false;
-            this.dgvDeAn.Name = "dgvDeAn";
-            this.dgvDeAn.ReadOnly = true;
-            this.dgvDeAn.RowHeadersVisible = false;
-            this.dgvDeAn.RowHeadersWidth = 51;
-            this.dgvDeAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeAn.Size = new System.Drawing.Size(453, 309);
-            this.dgvDeAn.TabIndex = 0;
-            this.dgvDeAn.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
             // 
             // BTN_NS_Update
             // 
@@ -315,7 +317,7 @@
             this.pn_AddNewPB.Controls.Add(this.BTN_NS_Create);
             this.pn_AddNewPB.Controls.Add(this.txtNewPhongBan);
             this.pn_AddNewPB.Controls.Add(this.label5);
-            this.pn_AddNewPB.Location = new System.Drawing.Point(532, 71);
+            this.pn_AddNewPB.Location = new System.Drawing.Point(560, 78);
             this.pn_AddNewPB.Name = "pn_AddNewPB";
             this.pn_AddNewPB.Size = new System.Drawing.Size(359, 213);
             this.pn_AddNewPB.TabIndex = 74;
@@ -331,7 +333,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Demo.Properties.Resources.image_removebg_preview__7_;
-            this.pictureBox1.Location = new System.Drawing.Point(609, 370);
+            this.pictureBox1.Location = new System.Drawing.Point(560, 365);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(359, 267);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,8 +346,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pn_UpdatePB);
-            this.Controls.Add(this.pn_AddNewPB);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pn_AddNewPB);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -355,10 +357,10 @@
             this.VisibleChanged += new System.EventHandler(this.UserControlPhongBanDeAn_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).EndInit();
             this.pn_UpdatePB.ResumeLayout(false);
             this.pn_UpdatePB.PerformLayout();
             this.pn_AddNewPB.ResumeLayout(false);
@@ -370,11 +372,11 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvPhongBan;
+        private System.Windows.Forms.DataGridView dgvDeAn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvDeAn;
+        private System.Windows.Forms.DataGridView dgvPhongBan;
         private System.Windows.Forms.Button BTN_NS_Update;
         private System.Windows.Forms.Button BTN_NS_Create;
         private System.Windows.Forms.Label label3;

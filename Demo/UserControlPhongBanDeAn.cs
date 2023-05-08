@@ -77,7 +77,7 @@ namespace Demo
             }
             else
             {
-                dgvDeAn.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
+                dgvPhongBan.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
                 MessageBox.Show("Tạo phòng ban thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNewPhongBan.Clear();
                 txtNewTruongPhong.Clear();
@@ -122,7 +122,7 @@ namespace Demo
             }
             else
             {
-                dgvDeAn.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
+                dgvPhongBan.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
                 MessageBox.Show("Cật nhật phòng ban thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtUpdatePhongBan.Clear();
                 txtUpdateMaPB.Clear();

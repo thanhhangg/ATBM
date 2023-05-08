@@ -28,10 +28,10 @@ namespace Demo
         public string SoDT { get; set; }
 
         [JsonPropertyName("LUONG")]
-        public int Luong { get; set; }
+        public int? Luong { get; set; }
 
         [JsonPropertyName("PHUCAP")]
-        public int PhuCap { get; set; }
+        public int? PhuCap { get; set; }
 
         [JsonPropertyName("VAITRO")]
         public string VaiTro { get; set; }

@@ -127,7 +127,7 @@ namespace Demo
             }
             else
             {
-                btnEmp.Visible = false;
+                btnEmp.Visible = Auth.GetInstance().Role == "NS";
                 btnSearch.Visible = false;
                 btnGrant.Visible = false;
                 btnListObject.Visible = false;
