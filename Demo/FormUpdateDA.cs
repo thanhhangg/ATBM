@@ -14,6 +14,7 @@ namespace Demo
     public partial class FormUpdateDA : Form
     {
         string mada, tenda, ngaybd, phongtxt;
+
         public FormUpdateDA(string mada, string tenda, string ngaybd, string phong)
         {
             this.mada = mada;
