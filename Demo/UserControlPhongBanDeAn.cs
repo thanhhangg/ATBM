@@ -152,15 +152,16 @@ namespace Demo
         {
             FormAddDA form = new FormAddDA();
             form.StartPosition = FormStartPosition.CenterScreen;
+            form.FormClosed += Form_FormClosed;
             form.Show();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dgvPhongBan.SelectedCells.Count > 0)
+            if (dgvDeAn.SelectedCells.Count > 0)
             {
-                int rowIndex = dgvPhongBan.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvPhongBan.Rows[rowIndex];
+                int rowIndex = dgvDeAn.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvDeAn.Rows[rowIndex];
                 mada = selectedRow.Cells["MADA"].Value.ToString();
                 DialogResult message = MessageBox.Show("Bạn có muốn xóa mã đề án " + mada + " ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (message == DialogResult.Yes)
@@ -174,22 +175,29 @@ namespace Demo
                     var result = ApiRequest.Post<object>("/users/trgda/dean/delete", jsonBody);
                 }
             }
+            LoadData();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgvPhongBan.SelectedCells.Count > 0)
+            if (dgvDeAn.SelectedCells.Count > 0)
             {
-                int rowIndex = dgvPhongBan.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvPhongBan.Rows[rowIndex];
+                int rowIndex = dgvDeAn.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvDeAn.Rows[rowIndex];
                 mada = selectedRow.Cells["MADA"].Value.ToString();
                 tenda = selectedRow.Cells["TENDA"].Value.ToString();
                 ngaybd = selectedRow.Cells["NGAYBD"].Value.ToString();
                 phong = selectedRow.Cells["PHONG"].Value.ToString();
                 FormUpdateDA form = new FormUpdateDA(mada, tenda, ngaybd, phong);
                 form.StartPosition = FormStartPosition.CenterScreen;
+                form.FormClosed += Form_FormClosed;
                 form.Show();
             }
+        }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

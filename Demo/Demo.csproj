@@ -132,6 +132,9 @@
       <DependentUpon>UserControlSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="OracleUser.cs" />
+    <EmbeddedResource Include="FormAddDA.resx">
+      <DependentUpon>FormAddDA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,12 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\department.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\List_User1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-removebg-preview %287%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

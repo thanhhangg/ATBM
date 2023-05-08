@@ -134,8 +134,9 @@ namespace Demo
                 btnLogOut.Visible = true;
                 btnProfile.Visible = true;
                 btnPhongBanDeAn.Visible = true;
-                btnListEmpForManage.Visible = Auth.GetInstance().Role != "NV";
+                btnListEmpForManage.Visible = Auth.GetInstance().Role == "QL_TT";
                 _userControlProfile.LoadData();
+                _userControlManageEmp.LoadData();
                 _userControlPhongBanDeAn.LoadData();
                 OpenUc(_userControlProfile, btnProfile, "Profile");
             }

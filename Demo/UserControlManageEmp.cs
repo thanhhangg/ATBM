@@ -40,12 +40,6 @@ namespace Demo
 
         private void UserControlManageEmp_Load(object sender, EventArgs e)
         {
-            var pc = ApiRequest.GetAll<OracleProfile>("/users/qltt/phancong/\"3\"");
-
-            var nv = ApiRequest.GetAll<OracleProfile>("/users/qltt/nhanvien/\"3\"");
-
-            dgvListNV.AutoGenerateColumns = false;
-
             // dgvListNV
             // Tạo cột cho MANV
             DataGridViewTextBoxColumn colMANV = new DataGridViewTextBoxColumn();
@@ -110,8 +104,6 @@ namespace Demo
             colPHG.Visible = true;
             dgvListNV.Columns.Add(colPHG);
 
-            // dgvListPC
-            dgvListPC.AutoGenerateColumns = false;
 
             // Tạo cột cho PHG
             DataGridViewTextBoxColumn colMANV2 = new DataGridViewTextBoxColumn();
@@ -133,6 +125,19 @@ namespace Demo
             colTHOIGIAN.HeaderText = "THOIGIAN";
             colTHOIGIAN.Visible = true;
             dgvListPC.Columns.Add(colTHOIGIAN);
+
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            var pc = ApiRequest.GetAll<OracleProfile>("/users/qltt/phancong/" + Auth.GetInstance().Username);
+
+            var nv = ApiRequest.GetAll<OracleProfile>("/users/qltt/nhanvien/" + Auth.GetInstance().Username);
+
+            // dgvListPC
+            dgvListPC.AutoGenerateColumns = false;
+            dgvListNV.AutoGenerateColumns = false;
 
             dgvListNV.DataSource = nv;
             dgvListPC.DataSource = pc;

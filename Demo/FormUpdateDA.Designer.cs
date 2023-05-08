@@ -82,7 +82,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 29);
             this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.Text = "CẬP NHẬT";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
