@@ -1,4 +1,4 @@
-﻿namespace Demo
+namespace Demo
 {
     partial class UserControlPhongBanDeAn
     {
@@ -69,6 +69,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvPhongBan);
             this.panel1.Location = new System.Drawing.Point(60, 71);
+            this.panel1.Controls.Add(this.dgvDeAn);
+            this.panel1.Location = new System.Drawing.Point(36, 370);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 252);
             this.panel1.TabIndex = 7;
@@ -106,7 +108,7 @@
             this.panel3.Controls.Add(this.dgvDeAn);
             this.panel3.Location = new System.Drawing.Point(60, 370);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(461, 355);
+            this.panel3.Size = new System.Drawing.Size(461, 306);
             this.panel3.TabIndex = 8;
             // 
             // btnAdd
@@ -164,6 +166,18 @@
             this.dgvDeAn.Size = new System.Drawing.Size(453, 309);
             this.dgvDeAn.TabIndex = 0;
             this.dgvDeAn.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
+            this.dgvPhongBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Location = new System.Drawing.Point(3, 41);
+            this.dgvPhongBan.MultiSelect = false;
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.ReadOnly = true;
+            this.dgvPhongBan.RowHeadersVisible = false;
+            this.dgvPhongBan.RowHeadersWidth = 51;
+            this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhongBan.Size = new System.Drawing.Size(453, 256);
+            this.dgvPhongBan.TabIndex = 0;
+            this.dgvPhongBan.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
             // 
             // BTN_NS_Update
             // 

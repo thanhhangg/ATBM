@@ -113,6 +113,16 @@ namespace Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__10_ {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_removebg_preview__7_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (7)", resourceCulture);
