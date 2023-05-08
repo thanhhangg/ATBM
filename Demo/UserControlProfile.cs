@@ -14,7 +14,6 @@ namespace Demo
 {
     public partial class UserControlProfile : UserControl, IResetUserControl
     {
-        public bool isInvite = false;
         public UserControlProfile()
         {
             InitializeComponent();
@@ -22,7 +21,6 @@ namespace Demo
 
         private void UserControlProfile_Load(object sender, EventArgs e)
         {
-
             diachi.Visible = false;
             diachiTxt.Visible = true;
             ngaysinh.Visible = false;
@@ -31,8 +29,13 @@ namespace Demo
             sdtTxt.Visible = true;
             Edit.Visible = true;
             update.Visible = false;
-            Console.WriteLine("in profile: " + UserControlLogin.username);
-            var user = ApiRequest.GetAll<OracleProfile>("/users/nv/info/" + UserControlLogin.username);
+
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            var user = ApiRequest.GetAll<OracleProfile>("/users/nv/info/" + Auth.GetInstance().Username);
             id.Text = user[0].MANV.ToString();
             ten.Text = user[0].TENNV.ToString();
             phai.Text = user[0].PHAI.ToString();
@@ -99,7 +102,7 @@ namespace Demo
 
             var data = new
             {
-                username = UserControlLogin.username,
+                username = Auth.GetInstance().Username,
                 NGAYSINH = ngaySinh.ToString("dd-MMMM-yyyy"),
                 DIACHI = diaChiText.ToString(),
                 SODT = sdtText.ToString(),

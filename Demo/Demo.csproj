@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs" />
     <Compile Include="DBASysPriv.cs" />
     <Compile Include="DBATabPriv.cs" />
     <Compile Include="Employee.cs" />

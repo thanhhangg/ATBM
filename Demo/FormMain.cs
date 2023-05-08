@@ -45,7 +45,6 @@ namespace Demo
             _userControlManageEmp.Hide();
             _userControlPhongBanDeAn.Hide();
 
-
             _currentUserControl = _userControlLogin;
         }
 
@@ -114,7 +113,7 @@ namespace Demo
 
         public void OpenUcAfterLogin()
         {
-            if (UserControlLogin.username == "PRO")
+            if (Auth.GetInstance().Username == "PRO")
             {
                 btnEmp.Visible = true;
                 btnSearch.Visible = true;
@@ -135,10 +134,8 @@ namespace Demo
                 btnLogOut.Visible = true;
                 btnProfile.Visible = true;
                 btnPhongBanDeAn.Visible = true;
-                if (UserControlLogin.role == "NV")
-                    btnListEmpForManage.Visible = false;
-                else if (UserControlLogin.role == "QL_TT")
-                    btnListEmpForManage.Visible = true;
+                btnListEmpForManage.Visible = Auth.GetInstance().Role != "NV";
+                _userControlProfile.LoadData();
                 OpenUc(_userControlProfile, btnProfile, "Profile");
             }
         }
@@ -199,6 +196,7 @@ namespace Demo
             btnProfile.Visible = false;
             btnListEmpForManage.Visible = false;
             btnPhongBanDeAn.Visible = false;
+            Auth.GetInstance().LogOut();
             OpenUc(_userControlLogin, sender, "Login Sever");
         }
 
