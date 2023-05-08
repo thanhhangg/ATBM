@@ -136,6 +136,7 @@ namespace Demo
                 btnPhongBanDeAn.Visible = true;
                 btnListEmpForManage.Visible = Auth.GetInstance().Role != "NV";
                 _userControlProfile.LoadData();
+                _userControlPhongBanDeAn.LoadData();
                 OpenUc(_userControlProfile, btnProfile, "Profile");
             }
         }

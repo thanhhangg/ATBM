@@ -55,11 +55,23 @@
     <Compile Include="DBASysPriv.cs" />
     <Compile Include="DBATabPriv.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="FormAddDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddDA.Designer.cs">
+      <DependentUpon>FormAddDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateDA.Designer.cs">
+      <DependentUpon>FormUpdateDA.cs</DependentUpon>
     </Compile>
     <Compile Include="IResetUserControl.cs" />
     <Compile Include="OracleDeAn.cs" />
@@ -122,6 +134,9 @@
     <Compile Include="OracleUser.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateDA.resx">
+      <DependentUpon>FormUpdateDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

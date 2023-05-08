@@ -30,12 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvListUser = new System.Windows.Forms.DataGridView();
+            this.dgvPB = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvListRole = new System.Windows.Forms.DataGridView();
+            this.dgvDA = new System.Windows.Forms.DataGridView();
             this.BTN_NS_Update = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.BTN_NS_Create = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNewRole = new System.Windows.Forms.TextBox();
@@ -49,10 +48,13 @@
             this.cbUpdateMaTP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pn_AddNewPB = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPB)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDA)).BeginInit();
             this.pn_UpdatePB.SuspendLayout();
             this.pn_AddNewPB.SuspendLayout();
             this.SuspendLayout();
@@ -61,8 +63,8 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dgvListUser);
-            this.panel1.Location = new System.Drawing.Point(36, 466);
+            this.panel1.Controls.Add(this.dgvPB);
+            this.panel1.Location = new System.Drawing.Point(77, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 252);
             this.panel1.TabIndex = 7;
@@ -74,27 +76,30 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(21, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 37);
+            this.label1.Size = new System.Drawing.Size(189, 37);
             this.label1.TabIndex = 72;
-            this.label1.Text = "DE AN";
+            this.label1.Text = "PHONG BAN";
             // 
-            // dgvListUser
+            // dgvPB
             // 
-            this.dgvListUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListUser.Location = new System.Drawing.Point(7, 41);
-            this.dgvListUser.Name = "dgvListUser";
-            this.dgvListUser.ReadOnly = true;
-            this.dgvListUser.RowHeadersWidth = 51;
-            this.dgvListUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListUser.Size = new System.Drawing.Size(356, 202);
-            this.dgvListUser.TabIndex = 0;
+            this.dgvPB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPB.Location = new System.Drawing.Point(7, 41);
+            this.dgvPB.Name = "dgvPB";
+            this.dgvPB.ReadOnly = true;
+            this.dgvPB.RowHeadersWidth = 51;
+            this.dgvPB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPB.Size = new System.Drawing.Size(356, 202);
+            this.dgvPB.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnRemove);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.dgvListRole);
-            this.panel3.Location = new System.Drawing.Point(36, 29);
+            this.panel3.Controls.Add(this.dgvDA);
+            this.panel3.Location = new System.Drawing.Point(77, 322);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(461, 405);
             this.panel3.TabIndex = 8;
@@ -106,21 +111,21 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Location = new System.Drawing.Point(14, -1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 37);
+            this.label4.Size = new System.Drawing.Size(102, 37);
             this.label4.TabIndex = 73;
-            this.label4.Text = "PHONG BAN";
+            this.label4.Text = "DE AN";
             // 
-            // dgvListRole
+            // dgvDA
             // 
-            this.dgvListRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListRole.Location = new System.Drawing.Point(3, 41);
-            this.dgvListRole.MultiSelect = false;
-            this.dgvListRole.Name = "dgvListRole";
-            this.dgvListRole.ReadOnly = true;
-            this.dgvListRole.RowHeadersWidth = 51;
-            this.dgvListRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListRole.Size = new System.Drawing.Size(453, 359);
-            this.dgvListRole.TabIndex = 0;
+            this.dgvDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDA.Location = new System.Drawing.Point(3, 41);
+            this.dgvDA.MultiSelect = false;
+            this.dgvDA.Name = "dgvDA";
+            this.dgvDA.ReadOnly = true;
+            this.dgvDA.RowHeadersWidth = 51;
+            this.dgvDA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDA.Size = new System.Drawing.Size(453, 359);
+            this.dgvDA.TabIndex = 0;
             // 
             // BTN_NS_Update
             // 
@@ -131,15 +136,6 @@
             this.BTN_NS_Update.Text = "Chỉnh sửa";
             this.BTN_NS_Update.UseVisualStyleBackColor = true;
             this.BTN_NS_Update.Click += new System.EventHandler(this.BTN_NS_Update_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(255, 649);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(8, 8);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // BTN_NS_Create
             // 
@@ -275,13 +271,42 @@
             this.pn_AddNewPB.Size = new System.Drawing.Size(359, 213);
             this.pn_AddNewPB.TabIndex = 74;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(381, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 36);
+            this.btnUpdate.TabIndex = 74;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(219, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 36);
+            this.btnAdd.TabIndex = 75;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(300, 4);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 36);
+            this.btnRemove.TabIndex = 76;
+            this.btnRemove.Text = "Xóa";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // UserControlPhongBanDeAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pn_UpdatePB);
             this.Controls.Add(this.pn_AddNewPB);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,10 +317,10 @@
             this.VisibleChanged += new System.EventHandler(this.UserControlPhongBanDeAn_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPB)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDA)).EndInit();
             this.pn_UpdatePB.ResumeLayout(false);
             this.pn_UpdatePB.PerformLayout();
             this.pn_AddNewPB.ResumeLayout(false);
@@ -306,13 +331,12 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvListUser;
+        private System.Windows.Forms.DataGridView dgvPB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvListRole;
+        private System.Windows.Forms.DataGridView dgvDA;
         private System.Windows.Forms.Button BTN_NS_Update;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BTN_NS_Create;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNewRole;
@@ -326,5 +350,8 @@
         private System.Windows.Forms.Panel pn_AddNewPB;
         private System.Windows.Forms.ComboBox cbUpdateMaTP;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
