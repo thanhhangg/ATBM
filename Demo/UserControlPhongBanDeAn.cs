@@ -13,7 +13,6 @@ namespace Demo
 {
     public partial class UserControlPhongBanDeAn : UserControl
     {
-        public bool isInvite = false;
         public UserControlPhongBanDeAn()
         {
             InitializeComponent();
@@ -23,21 +22,6 @@ namespace Demo
         {
         }
 
-        private void cbxAddNew_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            Reset();
-        }
-
-        private void cbxAddNew_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void UserControlPhongBanDeAn_Load(object sender, EventArgs e)
         {
             var phongban = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
@@ -45,12 +29,7 @@ namespace Demo
 
             var dean = ApiRequest.GetAll<OracleDeAn>("/users/nv/dean");
             dgvListRole.DataSource = dean;
-            //OracleDeAn firstObject = dean[0];
-            //Console.WriteLine(firstObject.MADA);
-
         }
-
-
 
         private void btnDeleteRole_Click(object sender, EventArgs e)
         {
@@ -117,7 +96,18 @@ namespace Demo
             }
         }
 
-        private void dgvListUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UserControlPhongBanDeAn_VisibleChanged(object sender, EventArgs e)
+        {
+            pn_AddNewPB.Enabled = Auth.GetInstance().Role == "NS";
+            pn_UpdatePB.Enabled = Auth.GetInstance().Role == "NS";
+        }
+
+        private void BTN_NS_Create_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_NS_Update_Click(object sender, EventArgs e)
         {
 
         }

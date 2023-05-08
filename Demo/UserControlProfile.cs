@@ -30,6 +30,20 @@ namespace Demo
             Edit.Visible = true;
             update.Visible = false;
 
+            // Tạo cột cho MADA
+            DataGridViewTextBoxColumn colMADA = new DataGridViewTextBoxColumn();
+            colMADA.DataPropertyName = "MADA";
+            colMADA.HeaderText = "MADA";
+            colMADA.Visible = true;
+            dgvPhanCong.Columns.Add(colMADA);
+
+            // Tạo cột cho THOIGIAN
+            DataGridViewTextBoxColumn colTHOIGIAN = new DataGridViewTextBoxColumn();
+            colTHOIGIAN.DataPropertyName = "THOIGIAN";
+            colTHOIGIAN.HeaderText = "THOIGIAN";
+            colTHOIGIAN.Visible = true;
+            dgvPhanCong.Columns.Add(colTHOIGIAN);
+
             LoadData();
         }
 
@@ -49,21 +63,6 @@ namespace Demo
             phong.Text = user[0].PHG.ToString();
 
             dgvPhanCong.AutoGenerateColumns = false;
-
-            // Tạo cột cho MADA
-            DataGridViewTextBoxColumn colMADA = new DataGridViewTextBoxColumn();
-            colMADA.DataPropertyName = "MADA";
-            colMADA.HeaderText = "MADA";
-            colMADA.Visible = true;
-            dgvPhanCong.Columns.Add(colMADA);
-
-            // Tạo cột cho THOIGIAN
-            DataGridViewTextBoxColumn colTHOIGIAN = new DataGridViewTextBoxColumn();
-            colTHOIGIAN.DataPropertyName = "THOIGIAN";
-            colTHOIGIAN.HeaderText = "THOIGIAN";
-            colTHOIGIAN.Visible = true;
-            dgvPhanCong.Columns.Add(colTHOIGIAN);
-
             dgvPhanCong.DataSource = user;
         }
 
