@@ -32,17 +32,10 @@ namespace Demo
         public void LoadData()
         {
             var phongban = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
-<<<<<<< HEAD
-            dgvPB.DataSource = phongban;
-
-            var dean = ApiRequest.GetAll<OracleDeAn>("/users/nv/dean");
-            dgvDA.DataSource = dean;
-=======
             dgvPhongBan.DataSource = phongban;
 
             var dean = ApiRequest.GetAll<OracleDeAn>("/users/nv/dean");
             dgvDeAn.DataSource = dean;
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
         }
 
         private void UserControlPhongBanDeAn_VisibleChanged(object sender, EventArgs e)
@@ -84,7 +77,7 @@ namespace Demo
             }
             else
             {
-                dgvPhongBan.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
+                dgvDeAn.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
                 MessageBox.Show("Tạo phòng ban thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNewPhongBan.Clear();
                 txtNewTruongPhong.Clear();
@@ -129,7 +122,7 @@ namespace Demo
             }
             else
             {
-                dgvPhongBan.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
+                dgvDeAn.DataSource = ApiRequest.GetAll<OraclePhongBan>("/users/nv/phongban");
                 MessageBox.Show("Cật nhật phòng ban thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtUpdatePhongBan.Clear();
                 txtUpdateMaPB.Clear();
@@ -164,10 +157,10 @@ namespace Demo
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dgvDA.SelectedCells.Count > 0)
+            if (dgvPhongBan.SelectedCells.Count > 0)
             {
-                int rowIndex = dgvDA.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvDA.Rows[rowIndex];
+                int rowIndex = dgvPhongBan.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPhongBan.Rows[rowIndex];
                 mada = selectedRow.Cells["MADA"].Value.ToString();
                 DialogResult message = MessageBox.Show("Bạn có muốn xóa mã đề án " + mada + " ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (message == DialogResult.Yes)
@@ -185,10 +178,10 @@ namespace Demo
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (dgvDA.SelectedCells.Count > 0)
+            if (dgvPhongBan.SelectedCells.Count > 0)
             {
-                int rowIndex = dgvDA.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvDA.Rows[rowIndex];
+                int rowIndex = dgvPhongBan.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPhongBan.Rows[rowIndex];
                 mada = selectedRow.Cells["MADA"].Value.ToString();
                 tenda = selectedRow.Cells["TENDA"].Value.ToString();
                 ngaybd = selectedRow.Cells["NGAYBD"].Value.ToString();

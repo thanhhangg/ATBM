@@ -21,10 +21,10 @@ namespace Demo
                 NGAYBD = ngaybd.ToString("dd-MMMM-yyyy"),
                 PHONG = phong.Text.ToString(),
             };
-            Console.WriteLine(data);
             string jsonBody = JsonSerializer.Serialize(data);
             var result = ApiRequest.Post<object>("/users/trgda/dean/insert", jsonBody);
             this.Close();
+
         }
     }
 }

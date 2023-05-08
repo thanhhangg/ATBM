@@ -30,17 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.dgvPB = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvDA = new System.Windows.Forms.DataGridView();
-=======
-            this.dgvDeAn = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.dgvPhongBan = new System.Windows.Forms.DataGridView();
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvDeAn = new System.Windows.Forms.DataGridView();
             this.BTN_NS_Update = new System.Windows.Forms.Button();
             this.BTN_NS_Create = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,27 +47,17 @@
             this.txtUpdatePhongBan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_UpdatePB = new System.Windows.Forms.Panel();
+            this.txtUpdateTruongPhong = new System.Windows.Forms.TextBox();
             this.txtUpdateMaPB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pn_AddNewPB = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPB)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDA)).BeginInit();
-=======
-            this.txtUpdateTruongPhong = new System.Windows.Forms.TextBox();
             this.txtNewTruongPhong = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).BeginInit();
             this.pn_UpdatePB.SuspendLayout();
             this.pn_AddNewPB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,13 +67,8 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-<<<<<<< HEAD
-            this.panel1.Controls.Add(this.dgvPB);
-            this.panel1.Location = new System.Drawing.Point(77, 32);
-=======
-            this.panel1.Controls.Add(this.dgvDeAn);
-            this.panel1.Location = new System.Drawing.Point(40, 414);
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.panel1.Controls.Add(this.dgvPhongBan);
+            this.panel1.Location = new System.Drawing.Point(60, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 252);
             this.panel1.TabIndex = 7;
@@ -103,48 +84,60 @@
             this.label1.TabIndex = 72;
             this.label1.Text = "PHONG BAN";
             // 
-<<<<<<< HEAD
-            // dgvPB
+            // dgvPhongBan
             // 
-            this.dgvPB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPB.Location = new System.Drawing.Point(7, 41);
-            this.dgvPB.Name = "dgvPB";
-            this.dgvPB.ReadOnly = true;
-            this.dgvPB.RowHeadersWidth = 51;
-            this.dgvPB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPB.Size = new System.Drawing.Size(356, 202);
-            this.dgvPB.TabIndex = 0;
-=======
-            // dgvDeAn
-            // 
-            this.dgvDeAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeAn.Location = new System.Drawing.Point(7, 41);
-            this.dgvDeAn.MultiSelect = false;
-            this.dgvDeAn.Name = "dgvDeAn";
-            this.dgvDeAn.ReadOnly = true;
-            this.dgvDeAn.RowHeadersWidth = 51;
-            this.dgvDeAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeAn.Size = new System.Drawing.Size(356, 202);
-            this.dgvDeAn.TabIndex = 0;
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Location = new System.Drawing.Point(7, 41);
+            this.dgvPhongBan.MultiSelect = false;
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.ReadOnly = true;
+            this.dgvPhongBan.RowHeadersWidth = 51;
+            this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhongBan.Size = new System.Drawing.Size(356, 202);
+            this.dgvPhongBan.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnRemove);
             this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.btnRemove);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.label4);
-<<<<<<< HEAD
-            this.panel3.Controls.Add(this.dgvDA);
-            this.panel3.Location = new System.Drawing.Point(77, 322);
-=======
-            this.panel3.Controls.Add(this.dgvPhongBan);
-            this.panel3.Location = new System.Drawing.Point(36, 29);
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.panel3.Controls.Add(this.dgvDeAn);
+            this.panel3.Location = new System.Drawing.Point(60, 370);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(461, 355);
             this.panel3.TabIndex = 8;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(219, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 33);
+            this.btnAdd.TabIndex = 76;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(300, 3);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 33);
+            this.btnRemove.TabIndex = 75;
+            this.btnRemove.Text = "Xóa";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(381, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 33);
+            this.btnUpdate.TabIndex = 74;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -157,34 +150,20 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "DE AN";
             // 
-<<<<<<< HEAD
-            // dgvDA
+            // dgvDeAn
             // 
-            this.dgvDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDA.Location = new System.Drawing.Point(3, 41);
-            this.dgvDA.MultiSelect = false;
-            this.dgvDA.Name = "dgvDA";
-            this.dgvDA.ReadOnly = true;
-            this.dgvDA.RowHeadersWidth = 51;
-            this.dgvDA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDA.Size = new System.Drawing.Size(453, 359);
-            this.dgvDA.TabIndex = 0;
-=======
-            // dgvPhongBan
-            // 
-            this.dgvPhongBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhongBan.Location = new System.Drawing.Point(3, 41);
-            this.dgvPhongBan.MultiSelect = false;
-            this.dgvPhongBan.Name = "dgvPhongBan";
-            this.dgvPhongBan.ReadOnly = true;
-            this.dgvPhongBan.RowHeadersVisible = false;
-            this.dgvPhongBan.RowHeadersWidth = 51;
-            this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhongBan.Size = new System.Drawing.Size(453, 309);
-            this.dgvPhongBan.TabIndex = 0;
-            this.dgvPhongBan.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.dgvDeAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeAn.Location = new System.Drawing.Point(3, 41);
+            this.dgvDeAn.MultiSelect = false;
+            this.dgvDeAn.Name = "dgvDeAn";
+            this.dgvDeAn.ReadOnly = true;
+            this.dgvDeAn.RowHeadersVisible = false;
+            this.dgvDeAn.RowHeadersWidth = 51;
+            this.dgvDeAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeAn.Size = new System.Drawing.Size(453, 309);
+            this.dgvDeAn.TabIndex = 0;
+            this.dgvDeAn.SelectionChanged += new System.EventHandler(this.dgvPhongBan_SelectionChanged);
             // 
             // BTN_NS_Update
             // 
@@ -290,6 +269,14 @@
             this.pn_UpdatePB.Size = new System.Drawing.Size(359, 301);
             this.pn_UpdatePB.TabIndex = 75;
             // 
+            // txtUpdateTruongPhong
+            // 
+            this.txtUpdateTruongPhong.Location = new System.Drawing.Point(27, 195);
+            this.txtUpdateTruongPhong.MaxLength = 20;
+            this.txtUpdateTruongPhong.Name = "txtUpdateTruongPhong";
+            this.txtUpdateTruongPhong.Size = new System.Drawing.Size(292, 26);
+            this.txtUpdateTruongPhong.TabIndex = 76;
+            // 
             // txtUpdateMaPB
             // 
             this.txtUpdateMaPB.Location = new System.Drawing.Point(27, 70);
@@ -333,45 +320,6 @@
             this.pn_AddNewPB.Size = new System.Drawing.Size(359, 213);
             this.pn_AddNewPB.TabIndex = 74;
             // 
-<<<<<<< HEAD
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(381, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 36);
-            this.btnUpdate.TabIndex = 74;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(219, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 36);
-            this.btnAdd.TabIndex = 75;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(300, 4);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 36);
-            this.btnRemove.TabIndex = 76;
-            this.btnRemove.Text = "Xóa";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-=======
-            // txtUpdateTruongPhong
-            // 
-            this.txtUpdateTruongPhong.Location = new System.Drawing.Point(27, 195);
-            this.txtUpdateTruongPhong.MaxLength = 20;
-            this.txtUpdateTruongPhong.Name = "txtUpdateTruongPhong";
-            this.txtUpdateTruongPhong.Size = new System.Drawing.Size(292, 26);
-            this.txtUpdateTruongPhong.TabIndex = 76;
-            // 
             // txtNewTruongPhong
             // 
             this.txtNewTruongPhong.Location = new System.Drawing.Point(27, 122);
@@ -383,13 +331,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Demo.Properties.Resources.image_removebg_preview__7_;
-            this.pictureBox1.Location = new System.Drawing.Point(532, 370);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 370);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(359, 267);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
             // 
             // UserControlPhongBanDeAn
             // 
@@ -408,17 +355,10 @@
             this.VisibleChanged += new System.EventHandler(this.UserControlPhongBanDeAn_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPB)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDA)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeAn)).EndInit();
             this.pn_UpdatePB.ResumeLayout(false);
             this.pn_UpdatePB.PerformLayout();
             this.pn_AddNewPB.ResumeLayout(false);
@@ -430,19 +370,11 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-<<<<<<< HEAD
-        private System.Windows.Forms.DataGridView dgvPB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvDA;
-=======
-        private System.Windows.Forms.DataGridView dgvDeAn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvPhongBan;
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvDeAn;
         private System.Windows.Forms.Button BTN_NS_Update;
         private System.Windows.Forms.Button BTN_NS_Create;
         private System.Windows.Forms.Label label3;
@@ -455,16 +387,13 @@
         private System.Windows.Forms.Panel pn_UpdatePB;
         private System.Windows.Forms.Panel pn_AddNewPB;
         private System.Windows.Forms.Label label8;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
-=======
         private System.Windows.Forms.TextBox txtUpdateMaPB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtUpdateTruongPhong;
         private System.Windows.Forms.TextBox txtNewTruongPhong;
         private System.Windows.Forms.PictureBox pictureBox1;
->>>>>>> fcbd1bdca14bc9820de08a5f5df5f2c3c9f2ffbd
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
