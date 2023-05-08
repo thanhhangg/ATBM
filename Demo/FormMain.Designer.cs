@@ -30,6 +30,8 @@ namespace Demo
         private void InitializeComponent()
         {
             this.panelNav = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnListEmpForManage = new System.Windows.Forms.Button();
             this.btnEmp = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnGrant = new System.Windows.Forms.Button();
@@ -44,6 +46,7 @@ namespace Demo
             this.lblHeader = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnPhongBanDeAn = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +56,9 @@ namespace Demo
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
+            this.panelNav.Controls.Add(this.btnPhongBanDeAn);
+            this.panelNav.Controls.Add(this.btnProfile);
+            this.panelNav.Controls.Add(this.btnListEmpForManage);
             this.panelNav.Controls.Add(this.btnEmp);
             this.panelNav.Controls.Add(this.btnSearch);
             this.panelNav.Controls.Add(this.btnGrant);
@@ -64,6 +70,44 @@ namespace Demo
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(133, 800);
             this.panelNav.TabIndex = 1;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProfile.Image = global::Demo.Properties.Resources.profile;
+            this.btnProfile.Location = new System.Drawing.Point(0, 357);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnProfile.Size = new System.Drawing.Size(133, 60);
+            this.btnProfile.TabIndex = 10;
+            this.btnProfile.Text = "  Profile";
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Visible = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnListEmpForManage
+            // 
+            this.btnListEmpForManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListEmpForManage.FlatAppearance.BorderSize = 0;
+            this.btnListEmpForManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListEmpForManage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListEmpForManage.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnListEmpForManage.Image = global::Demo.Properties.Resources.search_profile;
+            this.btnListEmpForManage.Location = new System.Drawing.Point(0, 297);
+            this.btnListEmpForManage.Name = "btnListEmpForManage";
+            this.btnListEmpForManage.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnListEmpForManage.Size = new System.Drawing.Size(133, 60);
+            this.btnListEmpForManage.TabIndex = 11;
+            this.btnListEmpForManage.Text = "Employee";
+            this.btnListEmpForManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListEmpForManage.UseVisualStyleBackColor = true;
+            this.btnListEmpForManage.Visible = false;
+            this.btnListEmpForManage.Click += new System.EventHandler(this.btnListEmpForManage_Click);
             // 
             // btnEmp
             // 
@@ -256,9 +300,31 @@ namespace Demo
             this.panelContainer.Size = new System.Drawing.Size(1367, 743);
             this.panelContainer.TabIndex = 4;
             // 
+            // btnPhongBanDeAn
+            // 
+            this.btnPhongBanDeAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
+            this.btnPhongBanDeAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhongBanDeAn.FlatAppearance.BorderSize = 0;
+            this.btnPhongBanDeAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhongBanDeAn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBanDeAn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPhongBanDeAn.Image = global::Demo.Properties.Resources.dashboard;
+            this.btnPhongBanDeAn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhongBanDeAn.Location = new System.Drawing.Point(0, 417);
+            this.btnPhongBanDeAn.Name = "btnPhongBanDeAn";
+            this.btnPhongBanDeAn.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnPhongBanDeAn.Size = new System.Drawing.Size(133, 60);
+            this.btnPhongBanDeAn.TabIndex = 12;
+            this.btnPhongBanDeAn.Text = "  Phong Ban";
+            this.btnPhongBanDeAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPhongBanDeAn.UseVisualStyleBackColor = false;
+            this.btnPhongBanDeAn.Visible = false;
+            this.btnPhongBanDeAn.Click += new System.EventHandler(this.btnPhongBanDeAn_Click);
+            // 
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 800);
             this.Controls.Add(this.panelContainer);
@@ -294,5 +360,8 @@ namespace Demo
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEmp;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnListEmpForManage;
+        private System.Windows.Forms.Button btnPhongBanDeAn;
     }
 }

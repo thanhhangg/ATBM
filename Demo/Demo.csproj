@@ -61,6 +61,9 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="IResetUserControl.cs" />
+    <Compile Include="OracleDeAn.cs" />
+    <Compile Include="OraclePhongBan.cs" />
+    <Compile Include="OracleProfile.cs" />
     <Compile Include="OracleRole.cs" />
     <Compile Include="PostResult.cs" />
     <Compile Include="Program.cs" />
@@ -90,6 +93,24 @@
     </Compile>
     <Compile Include="UserControlGrant.Designer.cs">
       <DependentUpon>UserControlGrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlManageEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlManageEmp.Designer.cs">
+      <DependentUpon>UserControlManageEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPhongBanDeAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPhongBanDeAn.Designer.cs">
+      <DependentUpon>UserControlPhongBanDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlProfile.Designer.cs">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSearch.cs">
       <SubType>UserControl</SubType>
@@ -122,6 +143,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlGrant.resx">
       <DependentUpon>UserControlGrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlManageEmp.resx">
+      <DependentUpon>UserControlManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPhongBanDeAn.resx">
+      <DependentUpon>UserControlPhongBanDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlProfile.resx">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSearch.resx">
       <DependentUpon>UserControlSearch.cs</DependentUpon>
@@ -183,6 +213,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ListNV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

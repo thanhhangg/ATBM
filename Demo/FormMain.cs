@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace Demo
         private readonly UserControlSearch _userControlSearch = new UserControlSearch();
         private readonly UserControlLogin _userControlLogin = new UserControlLogin();
         private readonly UserControlListEmployee _userControlEmployee = new UserControlListEmployee();
+        private readonly UserControlProfile _userControlProfile = new UserControlProfile();
+        private readonly UserControlManageEmp _userControlManageEmp = new UserControlManageEmp();
+        private readonly UserControlPhongBanDeAn _userControlPhongBanDeAn = new UserControlPhongBanDeAn();
 
 
         private static FormMain _instance;
@@ -29,13 +33,19 @@ namespace Demo
             panelContainer.Controls.Add(_userControlSearch);
             panelContainer.Controls.Add(_userControlLogin);
             panelContainer.Controls.Add(_userControlEmployee);
+            panelContainer.Controls.Add(_userControlProfile);
+            panelContainer.Controls.Add(_userControlManageEmp);
+            panelContainer.Controls.Add(_userControlPhongBanDeAn);
 
             _userControlListObject.Hide();
             _userControlGrant.Hide();
             _userControlSearch.Hide();
             _userControlEmployee.Hide();
-           
-            
+            _userControlProfile.Hide();
+            _userControlManageEmp.Hide();
+            _userControlPhongBanDeAn.Hide();
+
+
             _currentUserControl = _userControlLogin;
         }
 
@@ -83,6 +93,12 @@ namespace Demo
                 _userControlLogin.BringToFront();
             else if (uc is UserControlListEmployee)
                 _userControlEmployee.BringToFront();
+            else if (uc is UserControlProfile)
+                _userControlProfile.BringToFront();
+            else if (uc is UserControlManageEmp)
+                _userControlManageEmp.BringToFront();
+            else if (uc is UserControlPhongBanDeAn)
+                _userControlPhongBanDeAn.BringToFront();
 
             uc.Show();
             _currentUserControl.Hide();
@@ -98,13 +114,33 @@ namespace Demo
 
         public void OpenUcAfterLogin()
         {
-            _userControlLogin.Reset();
-            btnEmp.Visible = true;
-            btnSearch.Visible = true;
-            btnGrant.Visible = true;
-            btnListObject.Visible = true;
-            btnLogOut.Visible = true;
-            OpenUc(_userControlListObject, btnListObject, "List Object");
+            if (UserControlLogin.username == "PRO")
+            {
+                btnEmp.Visible = true;
+                btnSearch.Visible = true;
+                btnGrant.Visible = true;
+                btnListObject.Visible = true;
+                btnLogOut.Visible = true;
+                btnProfile.Visible = false;
+                btnListEmpForManage.Visible = false;
+                btnPhongBanDeAn.Visible = false;
+                OpenUc(_userControlListObject, btnListObject, "List Object");
+            }
+            else
+            {
+                btnEmp.Visible = false;
+                btnSearch.Visible = false;
+                btnGrant.Visible = false;
+                btnListObject.Visible = false;
+                btnLogOut.Visible = true;
+                btnProfile.Visible = true;
+                btnPhongBanDeAn.Visible = true;
+                if (UserControlLogin.role == "NV")
+                    btnListEmpForManage.Visible = false;
+                else if (UserControlLogin.role == "QL_TT")
+                    btnListEmpForManage.Visible = true;
+                OpenUc(_userControlProfile, btnProfile, "Profile");
+            }
         }
 
         #endregion
@@ -160,7 +196,9 @@ namespace Demo
             btnSearch.Visible = false;
             btnGrant.Visible = false;
             btnLogOut.Visible = false;
-
+            btnProfile.Visible = false;
+            btnListEmpForManage.Visible = false;
+            btnPhongBanDeAn.Visible = false;
             OpenUc(_userControlLogin, sender, "Login Sever");
         }
 
@@ -171,5 +209,24 @@ namespace Demo
             _userControlEmployee.Reset();
             OpenUc(_userControlEmployee, sender, "Employees");
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            _userControlProfile.Reset();
+            OpenUc(_userControlProfile, sender, "Profile");
+        }
+
+        private void btnListEmpForManage_Click(object sender, EventArgs e)
+        {
+            _userControlManageEmp.Reset();
+            OpenUc(_userControlManageEmp, sender, "List Employee");
+        }
+
+        private void btnPhongBanDeAn_Click(object sender, EventArgs e)
+        {
+            _userControlPhongBanDeAn.Reset();
+            OpenUc(_userControlPhongBanDeAn, sender, "Phong Ban Va De An");
+        }
+
     }
 }
